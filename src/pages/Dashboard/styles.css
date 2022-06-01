@@ -1,0 +1,64 @@
+html{
+    font-family: 'Nunito', sans-serif;
+}
+
+.header{
+    background-color: #F8F9FA;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    height: 70px;
+    align-items: center
+
+}
+.h1{
+    margin-left: 20px;
+    color:#FD377E;
+}
+.span{
+    padding-left: 10px;
+    color: black;
+}
+.headerButton{
+    margin-right: 20px;
+    border: none;
+    width: 64px;
+    height: 40px;
+    background-color:  #E9ECEF;
+    border-radius: 5px;
+    ;
+
+}
+.mainDash{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 50px;
+    box-sizing: border-box;
+
+}
+.divBoxLeft{
+    width: 36%;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 150px; 
+    flex-direction: column;
+}
+.divBoxLeftTop{
+    border: solid #E9ECEF;
+    padding: 10px;
+    
+}
+
+
+.divBoxRight{
+    width: 63%;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pForm{
+    font-size: 10px;
+}

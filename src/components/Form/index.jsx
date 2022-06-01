@@ -24,46 +24,46 @@ function Form({
   }
 
   return (
-  
     <>
+      <form className="form" onSubmit={(event) => event.preventDefault()}>
+        <h3>Descrição</h3>
+        <input
+          className="formDescricao"
+          value={description}
+          placeholder="Digite aqui sua descrição"
+          onChange={(event) => setDescription(event.target.value)}
+        ></input>
+        <p className="pForm">Ex: compra de roupas</p>
+        <div className="valorSelect">
+          <input
+            className="formValor"
+            value={value}
+            type="number"
+            placeholder="Valor"
+            onChange={(event) => setValue(Number(event.target.value))}
+          ></input>
 
-    <header>
-      <h1>Nu<span>Kenzie</span></h1>
-      <button>Inirio</button>
-      </header>
-    <form onSubmit={(event) => event.preventDefault()}>
-      <h3>Descrição</h3>
-      <input
-        className="formValorInput"
-        value={value}
-        type="number"
-        placeholder="Valor"
-        onChange={(event) => setValue(Number(event.target.value))}
-      ></input>
-      <input
-        value={description}
-        placeholder="Descrição"
-        onChange={(event) => setDescription(event.target.value)}
-      ></input>
-      <select
-        value={type}
-        onChange={(event) => {
-     
-          setType(event.target.value);
-        }}
-        name="select"
-      >
-        <option value="">Selecione</option>
-        <option value="entrada">Entrada</option>
-        <option value="saída">Saída</option>
-      </select>
-      <button
-        disabled={!type || !description || !value ? true : false}
-        onClick={() => addForm({ id: uuidv4(), description, type, value })}
-      >
-        Enviar
-      </button>
-    </form>
+          <select
+            value={type}
+            className="selectBoxLeft"
+            onChange={(event) => {
+              setType(event.target.value);
+            }}
+            name="select"
+          >
+            <option value="">Selecione</option>
+            <option value="entrada">Entrada</option>
+            <option value="saída">Saída</option>
+          </select>
+        </div>
+        <button
+          className="buttonBoxLeft"
+          disabled={!type || !description || !value ? true : false}
+          onClick={() => addForm({ id: uuidv4(), description, type, value })}
+        >
+          Inserir valor
+        </button>
+      </form>
     </>
   );
 }

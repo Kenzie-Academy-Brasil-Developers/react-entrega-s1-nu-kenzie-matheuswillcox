@@ -1,4 +1,48 @@
+.form{
+    display: flex;
+    gap: 20px;
+    align-items:flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
 
-.formValorInput{
+.formDescricao{
+    width: 314px;
+    height: 51px;
+    border: none;
+    background-color: #F8F9FA;
+    border-radius: 5px;
 
+}
+.valorSelect{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    border-radius: 5px;
+ 
+}
+
+.selectBoxLeft{
+    width: 150px;
+    height: 48px;
+    border: none;
+    background-color: #F8F9FA;
+    border-radius: 5px;
+
+}
+
+.formValor{
+    width: 128px;
+    height: 48px;
+    border: none;
+    background-color: #F8F9FA;
+    border-radius: 5px;
+}
+.buttonBoxLeft{
+    color: white;
+    width: 314px;
+    height: 48px;
+    background-color: #FD377E;
+    border: none;
+    border-radius: 5px;
 }
