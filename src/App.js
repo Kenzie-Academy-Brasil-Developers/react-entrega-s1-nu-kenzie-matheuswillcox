@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
-
+import "./App.css"
 
 function App() {
   
@@ -9,9 +9,9 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        {isLogged ? <Dashboard/> : <Home setIsLogged={setIsLogged} />}
-      </header>
+
+        {isLogged ? <Dashboard setIsLogged={setIsLogged} /> : <Home setIsLogged={setIsLogged} />}
+     
     </div>
   );
 }

@@ -46,7 +46,7 @@ font-style: normal;
 font-weight: 800;
 font-size: 38px;
 line-height: 48px;
-max-width: 300px;
+max-width: 80%;
 
 }
 
@@ -278,7 +278,7 @@ max-width: 300px;
         flex-direction: column;
         justify-content: center;
         gap: 30px;
-     
+        width: 70%;
   
         
     }

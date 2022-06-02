@@ -1,8 +1,10 @@
 import Card from "../Card";
+import "./styles.css";
 
 function List({ listTransactions, excluirCard }) {
   return (
-    <>
+    <div className="lista">
+     
       {listTransactions.map((transaction, index) => (
         <Card
           excluirCard={excluirCard}
@@ -11,7 +13,7 @@ function List({ listTransactions, excluirCard }) {
           id={transaction.id}
         />
       ))}
-    </>
+    </div>
   );
 }
 

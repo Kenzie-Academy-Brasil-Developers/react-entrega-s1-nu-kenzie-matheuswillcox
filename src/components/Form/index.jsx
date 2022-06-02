@@ -26,7 +26,7 @@ function Form({
   return (
     <>
       <form className="form" onSubmit={(event) => event.preventDefault()}>
-        <h3>Descrição</h3>
+        <h3 className="formH3">Descrição</h3>
         <input
           className="formDescricao"
           value={description}
@@ -39,7 +39,7 @@ function Form({
             className="formValor"
             value={value}
             type="number"
-            placeholder="Valor"
+            placeholder="Valor R$"
             onChange={(event) => setValue(Number(event.target.value))}
           ></input>
 
@@ -51,15 +51,23 @@ function Form({
             }}
             name="select"
           >
-            <option value="">Selecione</option>
+            <option value="">Tipo de Entrada</option>
             <option value="entrada">Entrada</option>
             <option value="saída">Saída</option>
           </select>
         </div>
         <button
           className="buttonBoxLeft"
+          style={{cursor: "pointer"}}
           disabled={!type || !description || !value ? true : false}
-          onClick={() => addForm({ id: uuidv4(), description, type, value })}
+          onClick={() =>
+            addForm({
+              id: uuidv4(),
+              description,
+              type,
+              value: type === "saída" ? value * -1 : value,
+            })
+          }
         >
           Inserir valor
         </button>
